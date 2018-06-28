@@ -1,6 +1,4 @@
 package data_structures;
-
-
 /** Copyright The League of Amazing Programmers 2013-2017
  *    Level 3
  *    A Murder of Crows
