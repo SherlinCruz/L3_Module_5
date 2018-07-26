@@ -28,18 +28,21 @@ public class RemovingStuffFromArrayLists {
 		System.out.println(stuffIFoundInTheYard.size());
 
 		/* TODO 1: Clean out the dirt but keep the delicious worms. */
-		
-		
-		for (int i = 0; i < stuffIFoundInTheYard.size(); i++) {
-			
-			stuffIFoundInTheYard.get(0);
-			
-			
-			Stuff g = stuffIFoundInTheYard.get(i);
-			
-			System.out.println(g);
+
+		ArrayList<Stuff> dirtFound = new ArrayList<Stuff>();
+		for (Stuff dirtt : stuffIFoundInTheYard) {
+			// if your in a for-loop you can't remove stuff from the list..
+			// the following code gets the dirt and makes a new list and then
+			if (dirtt instanceof Dirt) {
+
+				dirtFound.add(dirtt);
+
+				System.out.println(dirtt);
+			}
+
 		}
-		
+		// after the for-loop it deletes the all the dirt.
+		stuffIFoundInTheYard.removeAll(dirtFound);
 
 		System.out.println(stuffIFoundInTheYard.size()); // should be 2
 
@@ -69,6 +72,15 @@ public class RemovingStuffFromArrayLists {
 		truth.add('u');
 		truth.add('t');
 
+		ArrayList<Character> hashFound = new ArrayList<Character>();
+		for (Character hash : truth) {
+			if (hash.equals('#')) {
+				hashFound.add(hash);
+
+			}
+		}
+		truth.removeAll(hashFound);
+		System.out.println(truth);
 		/* TODO 2: Remove the hash symbols and print out the truth. */
 
 	}

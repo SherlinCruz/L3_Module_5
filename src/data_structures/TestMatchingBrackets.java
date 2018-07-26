@@ -23,7 +23,7 @@ public class TestMatchingBrackets {
 
 	private boolean doBracketsMatch(String b) {
 		Stack<Character> bracket = new Stack<Character>();
-		b = "{}{}{}{}";
+		// b = "{}{}{}{}";
 
 		for (int i = 0; i < b.length(); i++) {
 
@@ -33,20 +33,23 @@ public class TestMatchingBrackets {
 				if (bracket.empty()) {
 					return false;
 				} else {
+
 					bracket.pop();
 				}
 			}
-
 			if (c == '{') {
 				bracket.push('{');
-				if (bracket.empty()) {
-					return true;
-				}
+
 			}
-
 		}
+		return bracket.empty();
+		//both ways work 
+		
+		/*if (bracket.empty()) {
+			return true;
+		} else {
+			return false;
+		}*/
 
-		return false;
 	}
-
 }
