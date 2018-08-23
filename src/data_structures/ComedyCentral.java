@@ -18,27 +18,17 @@ public class ComedyCentral implements ActionListener {
 
 	JButton button = new JButton();
 
+	ArrayList<String> jokes = new ArrayList<String>();
+
+	ArrayList<String> punchlines = new ArrayList<String>();
+
 	public static void main(String[] args) {
+
 		ComedyCentral comedy = new ComedyCentral();
 		comedy.setup();
 	}
 
 	void setup() {
-		
-		System.out.println("sherlin");
-		
-		
-		frame.add(button);
-		
-		frame.setVisible(true);
-		
-		button.setVisible(true);
-		
-		button.addActionListener(this);
-
-		button.setText("Press me!");
-
-		ArrayList<String> jokes = new ArrayList<String>();
 
 		jokes.add("What's the difference between an elephant and a grape?");
 
@@ -48,7 +38,7 @@ public class ComedyCentral implements ActionListener {
 
 		jokes.add("What is a pirate’s favorite form of transportation?");
 
-		ArrayList<String> punchlines = new ArrayList<String>();
+		// ----------------------------------------------------------------------------------------------------------
 
 		punchlines.add("Grapes are purple");
 
@@ -58,41 +48,31 @@ public class ComedyCentral implements ActionListener {
 
 		punchlines.add("Ship");
 
-		Random rand = new Random();
-		int value = rand.nextInt(jokes.size());
+		frame.add(button);
 
-		if (rand.equals(0)) {
+		frame.setVisible(true);
 
-			System.out.println(punchlines.get(0));
+		button.setVisible(true);
 
-		}
-		if (rand.equals(1)) {
+		button.addActionListener(this);
 
-			System.out.println(punchlines.get(1));
+		button.setText("Press me!");
 
-		}
-		if (rand.equals(2)) {
-
-			System.out.println(punchlines.get(2));
-
-		}
-		if (rand.equals(3)) {
-
-			System.out.println(punchlines.get(3));
-
-		}
-frame.pack();
+		frame.pack();
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 
+		Random rand = new Random();
+
+		int value = rand.nextInt(jokes.size());
+
 		if (e.getSource().equals(button)) {
 
-			// System.out.println(punchlines);
-
-			setup();
+			JOptionPane.showMessageDialog(button, jokes.get(value));
+			JOptionPane.showMessageDialog(button, punchlines.get(value));
 
 		}
 
