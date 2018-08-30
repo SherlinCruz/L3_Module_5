@@ -10,17 +10,13 @@ public class ArrayOverload {
 	}
 
 	ArrayOverload() {
-		
-			ArrayList<String> arrays = new ArrayList<String>();
-			
+
+		ArrayList<String> arrays = new ArrayList<String>();
+
 		while (true) {
 
 			arrays.add("sherlin");
-			
 
-
-			
-			
 		}
 
 	}
