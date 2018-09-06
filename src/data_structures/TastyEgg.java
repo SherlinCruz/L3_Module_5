@@ -1,0 +1,49 @@
+package data_structures;
+
+import java.util.Random;
+
+public class TastyEgg {
+	public static void main(String[] args) {
+		KinderSurprise myKinderSurprise = new KinderSurprise(new Egg(new Toy())); // Your mission: Find out what toy is
+
+		System.out.println(myKinderSurprise.getKinderSurpriseContents().getEggContents().getToyName());
+
+		// inside your KinderSurprise.
+	}
+}
+
+class KinderSurprise {
+	private Egg egg;
+
+	public KinderSurprise(Egg egg) {
+		this.egg = egg;
+	}
+
+	Egg getKinderSurpriseContents() {
+		return egg; // ADD CODE HERE
+	}
+}
+
+class Egg {
+	private Toy toy;
+
+	public Egg(Toy toy) {
+		this.toy = toy;
+	}
+
+	Toy getEggContents() {
+		return toy;
+		// ADD CODE HERE
+	}
+}
+
+class Toy {
+	String getToyName() {
+		int randomToySelector = new Random().nextInt(2);
+		if (randomToySelector == 0)
+			return "play doh";
+		else if (randomToySelector == 1)
+			return "train";
+		return null;
+	}
+}
