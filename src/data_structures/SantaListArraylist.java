@@ -15,17 +15,15 @@ class SantaListArraylist {
 	public static void main(String[] args) {
 		new SantaListArraylist();
 	}
-	
+
 	SantaListArraylist() {
-		
+
 		ArrayList<JLabel> list = new ArrayList<>();
-	list.add(loadImageFromJavaProject("earring.jpg"));
-		
-		
-		
+		list.add(loadImageFromJavaProject("earring.jpg"));
+
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
-	
+
 		frame.setVisible(true);
 		panel.setVisible(true);
 
