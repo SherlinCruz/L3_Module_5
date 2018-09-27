@@ -3,9 +3,6 @@ package data_structures;
 import java.awt.Color;
 import java.util.ArrayList;
 
-import data_structures.Pig.Bubble;
-import data_structures.Pig.Decorator;
-import data_structures.Pig.Song;
 
 public class ListIterationBegginner {
 	public static void main(String[] args) {
